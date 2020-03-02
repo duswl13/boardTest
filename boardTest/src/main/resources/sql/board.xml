@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Board">
+	<select id="getAllList" parameterType="map"
+		resultType="BoardList">
+		SELECT * FROM (SELECT ROWNUM R,B.* FROM (SELECT
+		boardKey,title,author,writeDate,fileNameOrigin,readCount FROM
+		BOARDTEST
+		ORDER BY writeDate DESC) B) WHERE R BETWEEN #{startrow} AND
+		#{endrow}
+	</select>
+
+	<insert id="insertBoard" parameterType="BoardWrite">
+		INSERT INTO BOARDTEST
+		VALUES(NVL((SELECT MAX(BOARDKEY) FROM BOARDTEST),0)+1,
+		#{title},
+		#{content}, #{author}, SYSDATE, #{fileName},
+		#{fileNameOrigin},0)
+	</insert>
+
+
+	<update id="addReadCount" parameterType="int">
+		UPDATE BOARDTEST SET
+		READCOUNT = READCOUNT+1 WHERE BOARDKEY = #{boardKey}
+	</update>
+
+	<select id="getBoardDetail" parameterType="int"
+		resultType="BoardTest">
+		SELECT * FROM BOARDTEST WHERE BOARDKEY = #{boardKey}
+	</select>
+
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM BOARDTEST
+		WHERE BOARDKEY = #{boardKey}
+	</delete>
+
+	<update id="updateBoard" parameterType="BoardUpdate">
+	
+		UPDATE BOARDTEST SET
+		TITLE = #{title},
+		CONTENT = #{content},
+		FILENAME = #{fileName},
+		FILENAMEORIGIN = #{fileNameOrigin}
+		WHERE BOARDKEY = #{boardKey}
+
+	</update>
+	
+	<insert id="insertDeleteFile" parameterType="String">
+	INSERT INTO DELETEFILE VALUES(#{fileNameOrigin})
+	</insert>
+	
+	<select id="getdeleteList" resultType="String">
+	SELECT * FROM DELETEFILE
+	</select>
+	
+	<delete id="deleteList">
+	DELETE FROM DELETEFILE
+	</delete>
+</mapper>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LoL Test</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
+	rel="stylesheet">
+</head>
+<style>
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+	background: #F5F7F9;
+}
+
+nav {
+	background: #fff;
+}
+
+main h3 {
+	margin-top: 5em;
+	margin-bottom: 1.5em;
+	font-weight: bolder;
+}
+
+.page-item.active .page-link {
+	background-color: DarkTurquoise;
+	border-color: DarkTurquoise;
+}
+
+.page-link {
+	color: DarkTurquoise;
+}
+
+.btn-toolbar {
+	margin-bottom: 1em;
+}
+
+.card {
+	font-size: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.card .list-group-item:first-child {
+	color: DarkTurquoise;
+	font-weight: bold;
+}
+
+.table td, .table th {
+	text-align: center;
+	padding: 0px;
+	border-top: 0;
+}
+
+.table td:nth-child(2n) {
+	width: 2em;
+	padding-right: 1em;
+}
+</style>
+<body>
+	<header>
+		<nav class="navbar navbar-light fixed-top shadow-sm">
+			<div class="container">
+				<span class="navbar-brand"> LoL 토너먼트 </span> <span
+					class="navbar-text"> 로그인 </span>
+			</div>
+		</nav>
+	</header>
+	<main role="main">
+
+		<div class="container-fluid">
+
+
+
+			<div class="row">
+
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+					<div>
+						<h3 style="display: inline-block;">해당 토너먼트 제목</h3>
+						<div style="display: inline-block;" class="btn-group" role="group"
+							aria-label="First group" style="float: right;">
+
+							<button type="button" class="btn btn-secondary">수정</button>
+							<button type="button" class="btn btn-secondary">삭제</button>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+
+							<div class="card">
+
+								<div class="card-header">규칙</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">1:1 랜덤 토너먼트</li>
+									<li class="list-group-item">칼바람의 나락</li>
+									<li class="list-group-item">2티어 이상 차이날경우 스킬제한 1개씩 적용</li>
+								</ul>
+								<div class="card-body">
+									<a href="#" class="card-link">화면 캡쳐</a> <a href="#"
+										class="card-link">링크 공유</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+							<div class="card">
+								<div class="card-header">참여자 명단</div>
+								<ul class="list-group" style="height: 200px; overflow: auto">
+									<li class="list-group-item">Cras justo odio<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Dapibus ac facilisis in<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Morbi leo risus<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Porta ac consectetur ac<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Vestibulum at eros<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Cras justo odio<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Dapibus ac facilisis in<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Morbi leo risus<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Porta ac consectetur ac<i
+										class="fas fa-backspace"></i></li>
+									<li class="list-group-item">Vestibulum at eros<i
+										class="fas fa-backspace"></i></li>
+								</ul>
+							</div>
+
+
+
+						</div>
+					</div>
+
+
+					<h3>토너먼트 결과</h3>
+					<div class="card " style="padding: 2em;">
+						<table class="table" style="margin-top: 5em;">
+							<thead>
+								<tr>
+									<th>1라운드</th>
+									<th></th>
+									<th>2라운드</th>
+									<th></th>
+									<th>3라운드</th>
+									<th></th>
+									<th>4라운드</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+
+										</div>
+
+									</td>
+									<td>
+										<div class="tt"></div>
+									</td>
+									<td rowspan="2" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+									<td rowspan="2">
+										<div class="tt"></div>
+									</td>
+
+
+									<td rowspan="4" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+
+									<td rowspan="4">
+										<div class="tt"></div>
+									</td>
+									<td rowspan="8" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+									<td>
+										<div class="tt"></div>
+									</td>
+
+
+
+
+
+								</tr>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+									<td><div class="tt"></div></td>
+									<td rowspan="2" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+									<td rowspan="2">
+										<div class="tt"></div>
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+
+									<td>
+										<div class="tt"></div>
+									</td>
+								</tr>
+
+
+
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+									<td>
+										<div class="tt"></div>
+									</td>
+									<td rowspan="2" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+
+									<td rowspan="2">
+										<div class="tt"></div>
+									</td>
+									<td rowspan="4" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+									<td rowspan="4">
+										<div class="tt"></div>
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+									<td>
+										<div class="tt"></div>
+									</td>
+
+								</tr>
+
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+									<td>
+										<div class="tt"></div>
+									</td>
+									<td rowspan="2" style="vertical-align: middle;">
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+
+									</td>
+
+									<td rowspan="2">
+										<div class="tt"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="card">
+											<div class="card-header">2그룹</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">액정이가간다</li>
+												<li class="list-group-item">연지야</li>
+
+											</ul>
+										</div>
+									</td>
+
+									<td>
+										<div class="tt"></div>
+									</td>
+
+								</tr>
+
+
+							</tbody>
+
+
+						</table>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+	</main>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(".tt").height($("table .card").outerHeight() / 1.3);
+
+$("tr:nth-child(odd) td:nth-child(2) .tt").css({
+	'margin-top' : $("table .card").outerHeight() / 1.3 + 'px',
+	'border-top' : '1px solid #ccc',
+	'border-right' : '1px solid #ccc'
+});
+
+$("tr:nth-child(even) td:nth-child(2) .tt").css({
+	'border-bottom' : '1px solid #ccc',
+	'border-right' : '1px solid #ccc'
+});
+
+for (var i = 0; i < $("tr td:nth-child(4) .tt").length; i++) {
+
+	$("tr td:nth-child(4) .tt").height(
+			$("table .card").outerHeight());
+
+	if (i % 2 == 0) {
+		$("tr td:nth-child(4) .tt:eq(" + i + ")").css({
+
+			'margin-top' : $("table .card").outerHeight() * 1.75 + 'px',
+			'border-top' : '1px solid #ccc',
+			'border-right' : '1px solid #ccc'
+
+		});
+	} else {
+
+		$("tr td:nth-child(4) .tt:eq(" + i + ")").css({
+			'border-bottom' : '1px solid #ccc',
+			'border-right' : '1px solid #ccc'
+
+		});
+
+	}
+
+}
+
+
+for (var i = 0; i < $("tr td:nth-child(6) .tt").length; i++) {
+
+	$("tr td:nth-child(6) .tt").height(
+			$("table .card").outerHeight()*3);
+
+	if (i % 2 == 0) {
+		$("tr td:nth-child(6) .tt:eq(" + i + ")").css({
+
+			'margin-top' : $("table .card").outerHeight() * 2.5 + 'px',
+			'border-top' : '1px solid #ccc',
+			'border-right' : '1px solid #ccc'
+
+		});
+	} else {
+
+		$("tr td:nth-child(6) .tt:eq(" + i + ")").css({
+			'border-bottom' : '1px solid #ccc',
+			'border-right' : '1px solid #ccc'
+
+		});
+
+	}
+
+}
+
+
+	$("thead input:checkbox").on('click', function() {
+
+		if ($(this).prop('checked')) {
+
+			$("tbody input:checkbox").prop("checked", true);
+			$("tbody tr").removeClass("table-light");
+			$("tbody tr").addClass("table-active");
+		} else {
+			$("tbody input:checkbox").prop("checked", false);
+			$("tbody tr").removeClass("table-active");
+			$("tbody tr").addClass("table-light");
+
+		}
+	});
+
+	$("tbody input:checkbox").on('click', function() {
+
+		if ($(this).prop('checked')) {
+
+			$(this).parent().parent().parent().removeClass("table-light");
+			$(this).parent().parent().parent().addClass("table-active");
+		} else {
+			$(this).parent().parent().parent().removeClass("table-active");
+			$(this).parent().parent().parent().addClass("table-light");
+
+		}
+	});
+</script>
+</html>
